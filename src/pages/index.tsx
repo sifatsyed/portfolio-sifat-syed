@@ -1,15 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import Layout from "@/components/Layout";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export default function Home() {
   return (
@@ -17,7 +6,7 @@ export default function Home() {
       {/* 1. Hero */}
       <section id="hero" className="py-20 text-center">
         <h1 className="text-4xl font-bold">Hi, I'm Sifat 👋</h1>
-        <p className="text-lg mt-4 text-gray-600">[Your short intro & tagline goes here]</p>
+        <p className="text-lg mt-4">[Your short intro & tagline goes here]</p>
         <div className="mt-6 flex justify-center gap-4">
           <a href="/resume.pdf" className="px-4 py-2 bg-black text-white rounded">Resume</a>
           <a href="#projects" className="px-4 py-2 border border-black rounded">My Work</a>
@@ -28,7 +17,7 @@ export default function Home() {
       {/* 2. About Me */}
       <section id="about" className="py-16 border-t">
         <h2 className="text-2xl font-bold mb-4">About Me</h2>
-        <p className="text-gray-700">[Short bio, fun facts, brand statement]</p>
+        <p className="">[Short bio, fun facts, brand statement]</p>
       </section>
 
       {/* 3. Projects / Case Studies */}
