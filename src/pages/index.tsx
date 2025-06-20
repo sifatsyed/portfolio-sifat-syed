@@ -7,11 +7,11 @@ export default function Home() {
       <section id="hero" className="py-20 text-center">
         <h1 className="text-4xl font-bold">Hi, I'm Sifat 👋</h1>
         <p className="text-lg mt-4">[Your short intro & tagline goes here]</p>
-        <div className="mt-6 flex justify-center gap-4">
+        {/* <div className="mt-6 flex justify-center gap-4">
           <a href="/resume.pdf" className="px-4 py-2 bg-black text-white rounded">Resume</a>
           <a href="#projects" className="px-4 py-2 border border-black rounded">My Work</a>
           <a href="#contact" className="px-4 py-2 border border-black rounded">Let’s Chat</a>
-        </div>
+        </div> */}
       </section>
 
       {/* 2. About Me */}
