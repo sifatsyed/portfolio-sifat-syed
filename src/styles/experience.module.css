@@ -1,0 +1,464 @@
+/* Main Container */
+.container {
+  background-color: rgba(255, 255, 255, 1);
+  font-family:
+    "Plus Jakarta Sans",
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+}
+
+.mainWrapper {
+  background-color: rgba(255, 255, 255, 1);
+  min-height: 800px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.content {
+  width: 100%;
+}
+
+/* Header Styles */
+.header {
+  border-bottom: 1px solid rgba(229, 232, 235, 1);
+  display: flex;
+  width: 100%;
+  padding: 12px 40px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logoSection {
+  align-self: stretch;
+  display: flex;
+  margin: auto 0;
+  align-items: center;
+  gap: 16px;
+  justify-content: start;
+}
+
+.logoIcon {
+  align-self: stretch;
+  margin: auto 0;
+  width: 16px;
+}
+
+.logoImage {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 16px;
+  flex: 1;
+}
+
+.logoText {
+  align-self: stretch;
+  margin: auto 0;
+  min-height: 23px;
+  font-size: 18px;
+  color: rgba(18, 20, 23, 1);
+  font-weight: 700;
+  line-height: 1;
+  width: 157px;
+}
+
+.navSection {
+  align-self: stretch;
+  display: flex;
+  min-width: 240px;
+  margin: auto 0;
+  align-items: start;
+  gap: 32px;
+  justify-content: end;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.navigation {
+  display: flex;
+  min-width: 240px;
+  min-height: 40px;
+  align-items: center;
+  gap: 36px;
+  font-size: 14px;
+  color: rgba(18, 20, 23, 1);
+  font-weight: 500;
+  white-space: nowrap;
+  justify-content: start;
+}
+
+.navLink {
+  align-self: stretch;
+  margin: auto 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: rgba(102, 120, 130, 1);
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.iconButton {
+  border-radius: 20px;
+  background-color: rgba(242, 242, 245, 1);
+  display: flex;
+  min-height: 40px;
+  padding: 10px;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  max-width: 480px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.iconButton:hover {
+  background-color: rgba(230, 230, 235, 1);
+}
+
+.icon {
+  align-self: stretch;
+  margin: auto 0;
+  width: 100%;
+  flex: 1;
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 20px;
+}
+
+.profileImage {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 40px;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+/* Main Content */
+.mainContent {
+  display: flex;
+  width: 100%;
+  padding: 20px 160px;
+  align-items: start;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
+}
+
+.contentWrapper {
+  min-width: 240px;
+  width: 100%;
+  max-width: 960px;
+  overflow: hidden;
+  flex: 1;
+}
+
+/* Experience Header */
+.experienceHeader {
+  display: flex;
+  width: 100%;
+  padding: 16px;
+  align-items: start;
+  gap: 12px 0px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.headerContent {
+  min-width: 288px;
+  width: 514px;
+}
+
+.pageTitle {
+  width: 100%;
+  font-size: 32px;
+  color: rgba(18, 20, 23, 1);
+  font-weight: 700;
+  white-space: nowrap;
+  line-height: 1;
+  margin: 0;
+}
+
+.pageDescription {
+  margin-top: 12px;
+  width: 100%;
+  font-size: 14px;
+  color: rgba(102, 120, 130, 1);
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+/* Experience Timeline */
+.experienceTimeline {
+  width: 100%;
+}
+
+.experienceItem {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.companyName {
+  min-height: 60px;
+  width: 100%;
+  padding: 20px 16px 12px;
+  font-size: 22px;
+  color: rgba(18, 20, 23, 1);
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
+
+.roleInfo {
+  width: 100%;
+  padding: 4px 16px 12px;
+  font-size: 16px;
+  color: rgba(18, 20, 23, 1);
+  font-weight: 400;
+}
+
+.roleDescription {
+  width: 100%;
+  padding: 4px 16px 12px;
+  font-size: 16px;
+  color: rgba(18, 20, 23, 1);
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+}
+
+.skillTags {
+  display: flex;
+  width: 100%;
+  padding: 12px 12px 12px 16px;
+  align-items: start;
+  gap: 12px;
+  font-size: 14px;
+  color: rgba(18, 20, 23, 1);
+  font-weight: 500;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.skillTag {
+  border-radius: 16px;
+  background-color: rgba(242, 242, 245, 1);
+  display: flex;
+  min-height: 32px;
+  padding: 0 16px;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.skillTag:hover {
+  background-color: rgba(230, 230, 235, 1);
+}
+
+/* Skills Section */
+.skillsSection {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.skillsTitle {
+  width: 100%;
+  padding: 20px 16px 12px;
+  font-size: 22px;
+  color: rgba(18, 20, 23, 1);
+  font-weight: 700;
+  white-space: nowrap;
+  line-height: 1;
+  margin: 0;
+}
+
+.skillsGrid {
+  display: flex;
+  width: 100%;
+  padding: 12px 12px 12px 16px;
+  align-items: start;
+  gap: 12px;
+  font-size: 14px;
+  color: rgba(18, 20, 23, 1);
+  font-weight: 500;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.skillsGrid .skillTag {
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: fit-content;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  width: 100%;
+  align-items: start;
+  justify-content: center;
+}
+
+.footerContent {
+  min-width: 240px;
+  width: 100%;
+  max-width: 960px;
+  flex: 1;
+}
+
+.footerContent > div:first-child {
+  width: 100%;
+  padding: 40px 20px;
+  flex: 1;
+}
+
+.footerIcons {
+  display: flex;
+  width: 100%;
+  align-items: start;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footerIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 24px;
+}
+
+.footerIcon img {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  flex: 1;
+}
+
+.copyright {
+  margin-top: 24px;
+  width: 100%;
+  font-size: 16px;
+  color: rgba(102, 120, 130, 1);
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .header {
+    max-width: 100%;
+    padding: 12px 20px;
+  }
+
+  .navSection {
+    max-width: 100%;
+  }
+
+  .navigation {
+    max-width: 100%;
+    white-space: initial;
+  }
+
+  .navLink {
+    white-space: initial;
+  }
+
+  .mainContent {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .contentWrapper {
+    max-width: 100%;
+  }
+
+  .experienceHeader {
+    max-width: 100%;
+  }
+
+  .headerContent {
+    max-width: 100%;
+  }
+
+  .pageTitle {
+    max-width: 100%;
+    white-space: initial;
+  }
+
+  .pageDescription {
+    max-width: 100%;
+  }
+
+  .experienceItem {
+    max-width: 100%;
+  }
+
+  .companyName {
+    max-width: 100%;
+  }
+
+  .roleInfo {
+    max-width: 100%;
+  }
+
+  .roleDescription {
+    max-width: 100%;
+  }
+
+  .skillTags {
+    max-width: 100%;
+  }
+
+  .skillTag {
+    white-space: initial;
+  }
+
+  .skillsSection {
+    max-width: 100%;
+  }
+
+  .skillsTitle {
+    max-width: 100%;
+    white-space: initial;
+  }
+
+  .skillsGrid {
+    max-width: 100%;
+  }
+
+  .footer {
+    max-width: 100%;
+  }
+
+  .footerContent {
+    max-width: 100%;
+  }
+
+  .footerIcons {
+    max-width: 100%;
+  }
+
+  .copyright {
+    max-width: 100%;
+  }
+}
