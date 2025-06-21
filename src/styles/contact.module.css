@@ -1,0 +1,637 @@
+/* Main Container */
+.container {
+  background-color: rgba(255, 255, 255, 1);
+  font-family:
+    "Plus Jakarta Sans",
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+}
+
+.mainWrapper {
+  background-color: rgba(255, 255, 255, 1);
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.content {
+  width: 100%;
+}
+
+/* Header Styles */
+.header {
+  border-bottom: 1px solid rgba(229, 232, 235, 1);
+  display: flex;
+  width: 100%;
+  padding: 12px 40px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logoSection {
+  align-self: stretch;
+  display: flex;
+  margin: auto 0;
+  align-items: center;
+  gap: 16px;
+  justify-content: start;
+}
+
+.logoIcon {
+  align-self: stretch;
+  margin: auto 0;
+  width: 16px;
+}
+
+.logoImage {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 16px;
+  flex: 1;
+}
+
+.logoText {
+  align-self: stretch;
+  margin: auto 0;
+  min-height: 23px;
+  font-size: 18px;
+  color: rgba(18, 20, 23, 1);
+  font-weight: 700;
+  line-height: 1;
+  width: 157px;
+}
+
+.navSection {
+  align-self: stretch;
+  display: flex;
+  min-width: 240px;
+  margin: auto 0;
+  align-items: start;
+  gap: 32px;
+  justify-content: end;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.navigation {
+  display: flex;
+  min-width: 240px;
+  min-height: 40px;
+  align-items: center;
+  gap: 36px;
+  font-size: 14px;
+  color: rgba(18, 20, 23, 1);
+  font-weight: 500;
+  white-space: nowrap;
+  justify-content: start;
+}
+
+.navLink {
+  align-self: stretch;
+  margin: auto 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: rgba(102, 120, 130, 1);
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.iconButton {
+  border-radius: 20px;
+  background-color: rgba(242, 242, 245, 1);
+  display: flex;
+  min-height: 40px;
+  padding: 10px;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  max-width: 480px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.iconButton:hover {
+  background-color: rgba(230, 230, 235, 1);
+}
+
+.icon {
+  align-self: stretch;
+  margin: auto 0;
+  width: 100%;
+  flex: 1;
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 20px;
+}
+
+.profileImage {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 40px;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+/* Main Content */
+.mainContent {
+  display: flex;
+  width: 100%;
+  padding: 20px 160px;
+  align-items: start;
+  justify-content: center;
+  flex: 1;
+}
+
+.contentWrapper {
+  min-width: 240px;
+  width: 100%;
+  max-width: 1000px;
+  overflow: hidden;
+  flex: 1;
+}
+
+/* Hero Section */
+.heroSection {
+  padding: 60px 16px;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 48px;
+  font-weight: 800;
+  color: rgba(18, 20, 23, 1);
+  line-height: 1.1;
+  margin: 0 0 24px 0;
+}
+
+.heroDescription {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(102, 120, 130, 1);
+  margin: 0 0 48px 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroStats {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.statIcon {
+  font-size: 24px;
+}
+
+.statText {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(18, 20, 23, 1);
+}
+
+/* Contact Section */
+.contactSection {
+  padding: 80px 16px;
+  background-color: rgba(249, 250, 251, 1);
+}
+
+.contactContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.sectionTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: rgba(18, 20, 23, 1);
+  margin: 0 0 32px 0;
+}
+
+/* Form Styles */
+.formSection {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(18, 20, 23, 1);
+}
+
+.formInput,
+.formSelect,
+.formTextarea {
+  padding: 12px 16px;
+  border: 2px solid rgba(229, 232, 235, 1);
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.formInput:focus,
+.formSelect:focus,
+.formTextarea:focus {
+  outline: none;
+  border-color: rgba(18, 20, 23, 1);
+  box-shadow: 0 0 0 3px rgba(18, 20, 23, 0.1);
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitButton {
+  background-color: rgba(18, 20, 23, 1);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+  margin-top: 16px;
+}
+
+.submitButton:hover {
+  background-color: rgba(67, 85, 96, 1);
+  transform: translateY(-2px);
+}
+
+/* Info Section */
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contactMethods {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contactMethod {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.methodIcon {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(242, 242, 245, 1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.methodIcon img {
+  width: 24px;
+  height: 24px;
+}
+
+.methodContent {
+  flex: 1;
+}
+
+.methodTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(18, 20, 23, 1);
+  margin: 0 0 4px 0;
+}
+
+.methodText {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(67, 85, 96, 1);
+  margin: 0 0 4px 0;
+}
+
+.methodNote {
+  font-size: 14px;
+  color: rgba(102, 120, 130, 1);
+  margin: 0;
+}
+
+/* Availability */
+.availabilitySection {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.availabilityTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(18, 20, 23, 1);
+  margin: 0 0 16px 0;
+}
+
+.availabilityStatus {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.statusIndicator {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(34, 197, 94, 1);
+  border-radius: 50%;
+}
+
+.statusText {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(18, 20, 23, 1);
+}
+
+.availabilityNote {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(102, 120, 130, 1);
+  margin: 0;
+}
+
+/* Expectations */
+.expectationsSection {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.expectationsTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(18, 20, 23, 1);
+  margin: 0 0 20px 0;
+}
+
+.expectationsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.expectationItem {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.expectationNumber {
+  width: 32px;
+  height: 32px;
+  background-color: rgba(18, 20, 23, 1);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.expectationContent {
+  flex: 1;
+}
+
+.expectationTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(18, 20, 23, 1);
+  margin: 0 0 4px 0;
+}
+
+.expectationText {
+  font-size: 14px;
+  color: rgba(102, 120, 130, 1);
+  margin: 0;
+}
+
+/* FAQ Section */
+.faqSection {
+  padding: 80px 16px;
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.faqItem {
+  background: white;
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.faqQuestion {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(18, 20, 23, 1);
+  margin: 0 0 16px 0;
+}
+
+.faqAnswer {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(102, 120, 130, 1);
+  margin: 0;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  width: 100%;
+  align-items: start;
+  justify-content: center;
+  border-top: 1px solid rgba(229, 232, 235, 1);
+}
+
+.footerContent {
+  min-width: 240px;
+  width: 100%;
+  max-width: 960px;
+  flex: 1;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footerIcons {
+  display: flex;
+  width: 100%;
+  align-items: start;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.footerIcon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  object-position: center;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.footerIcon:hover {
+  opacity: 0.7;
+}
+
+.copyright {
+  font-size: 16px;
+  color: rgba(102, 120, 130, 1);
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .header {
+    padding: 12px 20px;
+  }
+
+  .mainContent {
+    padding: 20px;
+  }
+
+  .heroTitle {
+    font-size: 36px;
+  }
+
+  .heroStats {
+    gap: 24px;
+  }
+
+  .contactContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .formSection {
+    padding: 32px 24px;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .faqGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .navigation {
+    white-space: initial;
+  }
+
+  .navLink {
+    white-space: initial;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroSection {
+    padding: 40px 16px;
+  }
+
+  .contactSection,
+  .faqSection {
+    padding: 60px 16px;
+  }
+
+  .heroTitle {
+    font-size: 32px;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+  }
+
+  .heroStats {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .formSection {
+    padding: 24px 20px;
+  }
+
+  .faqItem {
+    padding: 24px 20px;
+  }
+}
