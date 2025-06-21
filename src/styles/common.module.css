@@ -1,0 +1,256 @@
+/* Common Typography */
+.heroTitle {
+  font-size: 48px;
+  font-weight: 800;
+  color: rgba(18, 20, 23, 1);
+  line-height: 1.1;
+  margin: 0 0 24px 0;
+}
+
+.heroDescription {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(102, 120, 130, 1);
+  margin: 0 0 48px 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sectionTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: rgba(18, 20, 23, 1);
+  margin: 0 0 32px 0;
+  text-align: center;
+}
+
+.subsectionTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: rgba(18, 20, 23, 1);
+  margin: 0 0 16px 0;
+}
+
+.bodyText {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(67, 85, 96, 1);
+  margin: 0 0 32px 0;
+}
+
+/* Common Sections */
+.heroSection {
+  padding: 60px 16px;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 80px 16px;
+}
+
+.sectionAlt {
+  padding: 80px 16px;
+  background-color: rgba(249, 250, 251, 1);
+}
+
+/* Common Cards */
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.cardPadding {
+  padding: 32px 24px;
+}
+
+.cardSmall {
+  padding: 24px 20px;
+}
+
+/* Common Buttons */
+.primaryButton {
+  background-color: rgba(18, 20, 23, 1);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.primaryButton:hover {
+  background-color: rgba(67, 85, 96, 1);
+  transform: translateY(-2px);
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: rgba(18, 20, 23, 1);
+  border: 2px solid rgba(18, 20, 23, 1);
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.secondaryButton:hover {
+  background-color: rgba(18, 20, 23, 1);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Common Tags */
+.tag {
+  border-radius: 16px;
+  background-color: rgba(242, 242, 245, 1);
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(18, 20, 23, 1);
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.tag:hover {
+  background-color: rgba(230, 230, 235, 1);
+}
+
+.tagSmall {
+  padding: 4px 12px;
+  font-size: 11px;
+}
+
+/* Common Grids */
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+}
+
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+/* Common Stats */
+.statItem {
+  text-align: center;
+}
+
+.statNumber {
+  display: block;
+  font-size: 32px;
+  font-weight: 800;
+  color: rgba(18, 20, 23, 1);
+  line-height: 1;
+}
+
+.statLabel {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(102, 120, 130, 1);
+  margin-top: 8px;
+}
+
+/* Common Back Navigation */
+.backNav {
+  padding: 20px 16px;
+}
+
+.backLink {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(102, 120, 130, 1);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: rgba(18, 20, 23, 1);
+}
+
+/* Responsive Utilities */
+@media (max-width: 991px) {
+  .heroTitle {
+    font-size: 36px;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+  }
+
+  .section,
+  .sectionAlt {
+    padding: 60px 16px;
+  }
+
+  .grid2,
+  .grid3,
+  .grid4 {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .cardPadding {
+    padding: 24px 20px;
+  }
+
+  .cardSmall {
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroSection {
+    padding: 40px 16px;
+  }
+
+  .heroTitle {
+    font-size: 32px;
+  }
+
+  .section,
+  .sectionAlt {
+    padding: 60px 16px;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    max-width: 300px;
+  }
+}

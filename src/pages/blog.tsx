@@ -1,12 +1,7 @@
 import React, { useState } from "react";
+import PageLayout from "../components/PageLayout";
 import styles from "../styles/blog.module.css";
-import homeIcon from "../assets/icons/home.svg";
-import globeIcon from "../assets/icons/globe.svg";
-import githubIcon from "../assets/icons/github.svg";
-import linkedinIcon from "../assets/icons/linkedin.svg";
-import twitterIcon from "../assets/icons/twitter.svg";
-import mailIcon from "../assets/icons/mail.svg";
-import userIcon from "../assets/icons/user.svg";
+import commonStyles from "../styles/common.module.css";
 
 export default function BlogPage() {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -119,255 +114,170 @@ export default function BlogPage() {
   const regularPosts = filteredPosts.filter((post) => !post.featured);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.mainWrapper}>
-        <div className={styles.content}>
-          {/* Navigation Header */}
-          <header className={styles.header}>
-            <div className={styles.logoSection}>
-              <div className={styles.logoIcon}>
-                <img src={homeIcon} alt="Logo" className={styles.logoImage} />
-              </div>
-              <div className={styles.logoText}>Sophie's Portfolio</div>
+    <PageLayout currentPage="blog">
+      {/* Hero Section */}
+      <section className={styles.heroSection}>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>Insights & Stories</h1>
+          <p className={styles.heroDescription}>
+            A collection of design insights, lessons learned, personal stories,
+            and behind-the-scenes glimpses into my creative process. Welcome to
+            my little corner of the internet.
+          </p>
+          <div className={styles.heroStats}>
+            <div className={styles.statItem}>
+              <span className={styles.statNumber}>24</span>
+              <span className={styles.statLabel}>Articles Written</span>
             </div>
-            <div className={styles.navSection}>
-              <nav className={styles.navigation}>
-                <div className={styles.navLink}>About</div>
-                <div className={styles.navLink}>Projects</div>
-                <div className={styles.navLink}>Experience</div>
-                <div className={styles.navLink}>Contact</div>
-              </nav>
-              <div className={styles.headerActions}>
-                <div className={styles.iconButton}>
-                  <img src={globeIcon} alt="Globe" className={styles.icon} />
-                </div>
-                <img
-                  src={userIcon}
-                  alt="Profile"
-                  className={styles.profileImage}
-                />
-              </div>
+            <div className={styles.statItem}>
+              <span className={styles.statNumber}>12K</span>
+              <span className={styles.statLabel}>Readers</span>
             </div>
-          </header>
-
-          {/* Main Content */}
-          <main className={styles.mainContent}>
-            <div className={styles.contentWrapper}>
-              {/* Hero Section */}
-              <section className={styles.heroSection}>
-                <div className={styles.heroContent}>
-                  <h1 className={styles.heroTitle}>Insights & Stories</h1>
-                  <p className={styles.heroDescription}>
-                    A collection of design insights, lessons learned, personal
-                    stories, and behind-the-scenes glimpses into my creative
-                    process. Welcome to my little corner of the internet.
-                  </p>
-                  <div className={styles.heroStats}>
-                    <div className={styles.statItem}>
-                      <span className={styles.statNumber}>24</span>
-                      <span className={styles.statLabel}>Articles Written</span>
-                    </div>
-                    <div className={styles.statItem}>
-                      <span className={styles.statNumber}>12K</span>
-                      <span className={styles.statLabel}>Readers</span>
-                    </div>
-                    <div className={styles.statItem}>
-                      <span className={styles.statNumber}>6</span>
-                      <span className={styles.statLabel}>Categories</span>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              {/* Filter Navigation */}
-              <section className={styles.filterSection}>
-                <div className={styles.filterContainer}>
-                  <h2 className={styles.filterTitle}>Browse by Category</h2>
-                  <div className={styles.filterButtons}>
-                    {filters.map((filter) => (
-                      <button
-                        key={filter.key}
-                        className={`${styles.filterButton} ${
-                          activeFilter === filter.key
-                            ? styles.filterButtonActive
-                            : ""
-                        }`}
-                        onClick={() => setActiveFilter(filter.key)}
-                      >
-                        {filter.label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </section>
-
-              {/* Featured Posts */}
-              {activeFilter === "all" && (
-                <section className={styles.featuredSection}>
-                  <h2 className={styles.sectionTitle}>Featured Stories</h2>
-                  <div className={styles.featuredGrid}>
-                    {featuredPosts.slice(0, 3).map((post) => (
-                      <article key={post.id} className={styles.featuredCard}>
-                        <div className={styles.cardContent}>
-                          <div className={styles.cardMeta}>
-                            <span className={styles.cardCategory}>
-                              {
-                                filters.find((f) => f.key === post.category)
-                                  ?.label
-                              }
-                            </span>
-                            <span className={styles.cardDate}>{post.date}</span>
-                          </div>
-                          <h3 className={styles.cardTitle}>{post.title}</h3>
-                          <p className={styles.cardExcerpt}>{post.excerpt}</p>
-                          <div className={styles.cardFooter}>
-                            <div className={styles.cardTags}>
-                              {post.tags.map((tag) => (
-                                <span key={tag} className={styles.cardTag}>
-                                  {tag}
-                                </span>
-                              ))}
-                            </div>
-                            <span className={styles.readTime}>
-                              {post.readTime}
-                            </span>
-                          </div>
-                        </div>
-                      </article>
-                    ))}
-                  </div>
-                </section>
-              )}
-
-              {/* All Posts Grid */}
-              <section className={styles.postsSection}>
-                <h2 className={styles.sectionTitle}>
-                  {activeFilter === "all"
-                    ? "All Posts"
-                    : filters.find((f) => f.key === activeFilter)?.label}
-                </h2>
-                <div className={styles.postsGrid}>
-                  {(activeFilter === "all" ? regularPosts : filteredPosts).map(
-                    (post) => (
-                      <article key={post.id} className={styles.postCard}>
-                        <div className={styles.postContent}>
-                          <div className={styles.postMeta}>
-                            <span className={styles.postCategory}>
-                              {
-                                filters.find((f) => f.key === post.category)
-                                  ?.label
-                              }
-                            </span>
-                            <span className={styles.postDate}>{post.date}</span>
-                          </div>
-                          <h3 className={styles.postTitle}>{post.title}</h3>
-                          <p className={styles.postExcerpt}>{post.excerpt}</p>
-                          <div className={styles.postFooter}>
-                            <div className={styles.postTags}>
-                              {post.tags.slice(0, 2).map((tag) => (
-                                <span key={tag} className={styles.postTag}>
-                                  {tag}
-                                </span>
-                              ))}
-                            </div>
-                            <span className={styles.postReadTime}>
-                              {post.readTime}
-                            </span>
-                          </div>
-                        </div>
-                      </article>
-                    ),
-                  )}
-                </div>
-              </section>
-
-              {/* About the Blog */}
-              <section className={styles.aboutBlogSection}>
-                <div className={styles.aboutBlogContent}>
-                  <h2 className={styles.aboutBlogTitle}>About This Blog</h2>
-                  <div className={styles.aboutBlogGrid}>
-                    <div className={styles.aboutBlogText}>
-                      <p className={styles.aboutBlogDescription}>
-                        This is my space to share the unfiltered truth about
-                        design work—the victories, failures, random
-                        inspirations, and everything in between. You'll find
-                        design insights mixed with personal stories, hobby
-                        adventures, and honest reflections on what I've learned.
-                      </p>
-                      <p className={styles.aboutBlogDescription}>
-                        I believe the best design comes from a full life, so I
-                        write about running marathons, perfecting coffee brewing
-                        techniques, playing guitar, and how these experiences
-                        shape my approach to design challenges.
-                      </p>
-                    </div>
-                    <div className={styles.aboutBlogSidebar}>
-                      <div className={styles.blogStats}>
-                        <h3 className={styles.blogStatsTitle}>Blog Stats</h3>
-                        <div className={styles.blogStat}>
-                          <span className={styles.blogStatLabel}>
-                            First Post
-                          </span>
-                          <span className={styles.blogStatValue}>Jan 2023</span>
-                        </div>
-                        <div className={styles.blogStat}>
-                          <span className={styles.blogStatLabel}>
-                            Posting Schedule
-                          </span>
-                          <span className={styles.blogStatValue}>Weekly</span>
-                        </div>
-                        <div className={styles.blogStat}>
-                          <span className={styles.blogStatLabel}>
-                            Average Length
-                          </span>
-                          <span className={styles.blogStatValue}>
-                            5 min read
-                          </span>
-                        </div>
-                      </div>
-                      <div className={styles.subscribeBox}>
-                        <h3 className={styles.subscribeTitle}>Stay Updated</h3>
-                        <p className={styles.subscribeDescription}>
-                          Get notified when I publish new stories and insights.
-                        </p>
-                        <button className={styles.subscribeButton}>
-                          Subscribe
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
+            <div className={styles.statItem}>
+              <span className={styles.statNumber}>6</span>
+              <span className={styles.statLabel}>Categories</span>
             </div>
-          </main>
+          </div>
+        </div>
+      </section>
 
-          {/* Footer */}
-          <footer className={styles.footer}>
-            <div className={styles.footerContent}>
-              <div className={styles.footerIcons}>
-                <img
-                  src={githubIcon}
-                  alt="GitHub"
-                  className={styles.footerIcon}
-                />
-                <img
-                  src={linkedinIcon}
-                  alt="LinkedIn"
-                  className={styles.footerIcon}
-                />
-                <img
-                  src={twitterIcon}
-                  alt="Twitter"
-                  className={styles.footerIcon}
-                />
-              </div>
-              <p className={styles.copyright}>
-                @2024 Sophie Carter. All rights reserved.
+      {/* Filter Navigation */}
+      <section className={styles.filterSection}>
+        <div className={styles.filterContainer}>
+          <h2 className={styles.filterTitle}>Browse by Category</h2>
+          <div className={styles.filterButtons}>
+            {filters.map((filter) => (
+              <button
+                key={filter.key}
+                className={`${styles.filterButton} ${
+                  activeFilter === filter.key ? styles.filterButtonActive : ""
+                }`}
+                onClick={() => setActiveFilter(filter.key)}
+              >
+                {filter.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Posts */}
+      {activeFilter === "all" && (
+        <section className={styles.featuredSection}>
+          <h2 className={styles.sectionTitle}>Featured Stories</h2>
+          <div className={styles.featuredGrid}>
+            {featuredPosts.slice(0, 3).map((post) => (
+              <article key={post.id} className={styles.featuredCard}>
+                <div className={styles.cardContent}>
+                  <div className={styles.cardMeta}>
+                    <span className={styles.cardCategory}>
+                      {filters.find((f) => f.key === post.category)?.label}
+                    </span>
+                    <span className={styles.cardDate}>{post.date}</span>
+                  </div>
+                  <h3 className={styles.cardTitle}>{post.title}</h3>
+                  <p className={styles.cardExcerpt}>{post.excerpt}</p>
+                  <div className={styles.cardFooter}>
+                    <div className={styles.cardTags}>
+                      {post.tags.map((tag) => (
+                        <span key={tag} className={styles.cardTag}>
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <span className={styles.readTime}>{post.readTime}</span>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* All Posts Grid */}
+      <section className={styles.postsSection}>
+        <h2 className={styles.sectionTitle}>
+          {activeFilter === "all"
+            ? "All Posts"
+            : filters.find((f) => f.key === activeFilter)?.label}
+        </h2>
+        <div className={styles.postsGrid}>
+          {(activeFilter === "all" ? regularPosts : filteredPosts).map(
+            (post) => (
+              <article key={post.id} className={styles.postCard}>
+                <div className={styles.postContent}>
+                  <div className={styles.postMeta}>
+                    <span className={styles.postCategory}>
+                      {filters.find((f) => f.key === post.category)?.label}
+                    </span>
+                    <span className={styles.postDate}>{post.date}</span>
+                  </div>
+                  <h3 className={styles.postTitle}>{post.title}</h3>
+                  <p className={styles.postExcerpt}>{post.excerpt}</p>
+                  <div className={styles.postFooter}>
+                    <div className={styles.postTags}>
+                      {post.tags.slice(0, 2).map((tag) => (
+                        <span key={tag} className={styles.postTag}>
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <span className={styles.postReadTime}>{post.readTime}</span>
+                  </div>
+                </div>
+              </article>
+            ),
+          )}
+        </div>
+      </section>
+
+      {/* About the Blog */}
+      <section className={styles.aboutBlogSection}>
+        <div className={styles.aboutBlogContent}>
+          <h2 className={styles.aboutBlogTitle}>About This Blog</h2>
+          <div className={styles.aboutBlogGrid}>
+            <div className={styles.aboutBlogText}>
+              <p className={styles.aboutBlogDescription}>
+                This is my space to share the unfiltered truth about design
+                work—the victories, failures, random inspirations, and
+                everything in between. You'll find design insights mixed with
+                personal stories, hobby adventures, and honest reflections on
+                what I've learned.
+              </p>
+              <p className={styles.aboutBlogDescription}>
+                I believe the best design comes from a full life, so I write
+                about running marathons, perfecting coffee brewing techniques,
+                playing guitar, and how these experiences shape my approach to
+                design challenges.
               </p>
             </div>
-          </footer>
+            <div className={styles.aboutBlogSidebar}>
+              <div className={styles.blogStats}>
+                <h3 className={styles.blogStatsTitle}>Blog Stats</h3>
+                <div className={styles.blogStat}>
+                  <span className={styles.blogStatLabel}>First Post</span>
+                  <span className={styles.blogStatValue}>Jan 2023</span>
+                </div>
+                <div className={styles.blogStat}>
+                  <span className={styles.blogStatLabel}>Posting Schedule</span>
+                  <span className={styles.blogStatValue}>Weekly</span>
+                </div>
+                <div className={styles.blogStat}>
+                  <span className={styles.blogStatLabel}>Average Length</span>
+                  <span className={styles.blogStatValue}>5 min read</span>
+                </div>
+              </div>
+              <div className={styles.subscribeBox}>
+                <h3 className={styles.subscribeTitle}>Stay Updated</h3>
+                <p className={styles.subscribeDescription}>
+                  Get notified when I publish new stories and insights.
+                </p>
+                <button className={styles.subscribeButton}>Subscribe</button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </PageLayout>
   );
 }
