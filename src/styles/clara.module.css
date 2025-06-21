@@ -1,0 +1,423 @@
+/* Main Container */
+.container {
+  background-color: rgba(255, 255, 255, 1);
+  font-family:
+    "Work Sans",
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+}
+
+.mainWrapper {
+  background-color: rgba(255, 255, 255, 1);
+  min-height: 800px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.content {
+  width: 100%;
+}
+
+/* Header Styles */
+.header {
+  border-bottom: 1px solid rgba(229, 232, 235, 1);
+  display: flex;
+  width: 100%;
+  padding: 12px 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navContainer {
+  align-self: stretch;
+  display: flex;
+  min-width: 240px;
+  margin: auto 0;
+  width: 100%;
+  align-items: start;
+  gap: 32px;
+  justify-content: end;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.navigation {
+  display: flex;
+  min-width: 240px;
+  min-height: 40px;
+  align-items: center;
+  gap: 36px;
+  font-size: 14px;
+  color: rgba(18, 20, 23, 1);
+  font-weight: 500;
+  white-space: nowrap;
+  justify-content: start;
+}
+
+.navLink {
+  align-self: stretch;
+  margin: auto 0;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: rgba(107, 120, 130, 1);
+}
+
+.socialIcons {
+  display: flex;
+  min-width: 240px;
+  align-items: start;
+  gap: 8px;
+  justify-content: start;
+}
+
+.iconButton {
+  border-radius: 20px;
+  background-color: rgba(242, 242, 245, 1);
+  display: flex;
+  min-height: 40px;
+  padding: 10px;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  max-width: 480px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.iconButton:hover {
+  background-color: rgba(230, 230, 235, 1);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.profileImage {
+  flex-shrink: 0;
+}
+
+.profilePic {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Main Content */
+.mainContent {
+  display: flex;
+  width: 100%;
+  padding: 20px 160px;
+  align-items: start;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
+}
+
+.contentWrapper {
+  min-width: 240px;
+  width: 100%;
+  max-width: 960px;
+  overflow: hidden;
+  flex: 1;
+}
+
+/* Hero Section */
+.heroSection {
+  width: 100%;
+  text-align: center;
+}
+
+.heroContainer {
+  display: flex;
+  width: 100%;
+  padding: 16px;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  flex: 1;
+}
+
+.heroBackground {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  position: relative;
+  min-height: 480px;
+  width: 100%;
+  padding: 243px 80px 41px;
+  overflow: hidden;
+  align-items: end;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
+.heroTextContainer {
+  position: relative;
+  width: 736px;
+  max-width: 100%;
+  color: rgba(255, 255, 255, 1);
+}
+
+.heroTitle {
+  width: 100%;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1;
+  margin: 0;
+}
+
+.heroDescription {
+  margin-top: 8px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+.ctaButton {
+  position: relative;
+  border-radius: 24px;
+  background-color: rgba(178, 209, 229, 1);
+  display: flex;
+  min-width: 84px;
+  margin-top: 32px;
+  margin-right: 214px;
+  min-height: 48px;
+  padding: 0 20px;
+  align-items: center;
+  overflow: hidden;
+  font-size: 16px;
+  color: rgba(18, 20, 23, 1);
+  font-weight: 700;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.ctaButton:hover {
+  background-color: rgba(158, 189, 209, 1);
+}
+
+.ctaText {
+  align-self: stretch;
+  margin: auto 0;
+  width: 112px;
+  overflow: hidden;
+}
+
+/* Projects Section */
+.projectsSection {
+  width: 100%;
+  padding: 40px 16px;
+}
+
+.projectsContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: start;
+  color: rgba(18, 20, 23, 1);
+  justify-content: start;
+}
+
+.sectionHeader {
+  width: 720px;
+  max-width: 100%;
+}
+
+.sectionTitle {
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin: 0;
+}
+
+.sectionDescription {
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+.projectsGrid {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  justify-content: start;
+  flex: 1;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.projectCard {
+  min-width: 240px;
+  padding-bottom: 12px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 241px;
+}
+
+.projectImage {
+  aspect-ratio: 1.78;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.projectInfo {
+  margin-top: 12px;
+  width: 100%;
+}
+
+.projectTitle {
+  width: 100%;
+  font-size: 16px;
+  color: rgba(18, 20, 23, 1);
+  font-weight: 500;
+  margin: 0 0 4px 0;
+}
+
+.projectDescription {
+  width: 100%;
+  font-size: 14px;
+  color: rgba(107, 120, 130, 1);
+  font-weight: 400;
+  line-height: 21px;
+  margin: 0;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footerIcons {
+  display: flex;
+  width: 100%;
+  align-items: start;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footerIcon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.copyright {
+  margin-top: 24px;
+  width: 100%;
+  font-size: 16px;
+  color: rgba(107, 120, 130, 1);
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .header {
+    max-width: 100%;
+    padding: 12px 20px;
+  }
+
+  .navContainer {
+    max-width: 100%;
+  }
+
+  .navigation {
+    max-width: 100%;
+    white-space: initial;
+  }
+
+  .navLink {
+    white-space: initial;
+  }
+
+  .mainContent {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .contentWrapper {
+    max-width: 100%;
+  }
+
+  .heroContainer {
+    max-width: 100%;
+  }
+
+  .heroBackground {
+    max-width: 100%;
+    padding: 100px 20px 41px;
+  }
+
+  .heroTitle {
+    max-width: 100%;
+    font-size: 40px;
+  }
+
+  .heroDescription {
+    max-width: 100%;
+  }
+
+  .ctaButton {
+    margin-right: 10px;
+  }
+
+  .projectsContainer {
+    max-width: 100%;
+  }
+
+  .sectionHeader {
+    max-width: 100%;
+  }
+
+  .projectsGrid {
+    max-width: 100%;
+  }
+
+  .footerIcons {
+    max-width: 100%;
+  }
+
+  .copyright {
+    max-width: 100%;
+  }
+}

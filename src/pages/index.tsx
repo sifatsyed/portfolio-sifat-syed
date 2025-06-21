@@ -1,8 +1,11 @@
 import Layout from "@/components/Layout";
+import Link from 'next/link';
 
 export default function Home() {
   return (
     <Layout>
+
+      <Link href="/clara">Go to Clara Page</Link>
       {/* 1. Hero */}
       <section id="hero" className="py-20 text-center">
         <h1 className="text-4xl font-bold">Hi, I'm Sifat 👋</h1>
