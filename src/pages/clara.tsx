@@ -1,17 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import styles from "../styles/clara.module.css";
-import homeIcon from "../assets/icons/home.svg";
-import globeIcon from "../assets/icons/globe.svg";
-import githubIcon from "../assets/icons/github.svg";
-import linkedinIcon from "../assets/icons/linkedin.svg";
-import twitterIcon from "../assets/icons/twitter.svg";
-import mailIcon from "../assets/icons/mail.svg";
-import userIcon from "../assets/icons/user.svg";
-import heroBg from "../assets/images/hero-bg.svg";
-import project1 from "../assets/images/project1.svg";
-import project2 from "../assets/images/project2.svg";
-import project3 from "../assets/images/project3.svg";
 
 export default function ClaraPortfolio() {
   return (
@@ -43,35 +32,51 @@ export default function ClaraPortfolio() {
               </nav>
               <div className={styles.socialIcons}>
                 <div className={styles.iconButton}>
-                  <img src={homeIcon} alt="Home" className={styles.icon} />
-                </div>
-                <div className={styles.iconButton}>
-                  <img src={globeIcon} alt="Globe" className={styles.icon} />
-                </div>
-                <div className={styles.iconButton}>
-                  <img src={githubIcon} alt="GitHub" className={styles.icon} />
+                  <img
+                    src="/assets/icons/home.svg"
+                    alt="Home"
+                    className={styles.icon}
+                  />
                 </div>
                 <div className={styles.iconButton}>
                   <img
-                    src={linkedinIcon}
+                    src="/assets/icons/globe.svg"
+                    alt="Globe"
+                    className={styles.icon}
+                  />
+                </div>
+                <div className={styles.iconButton}>
+                  <img
+                    src="/assets/icons/github.svg"
+                    alt="GitHub"
+                    className={styles.icon}
+                  />
+                </div>
+                <div className={styles.iconButton}>
+                  <img
+                    src="/assets/icons/linkedin.svg"
                     alt="LinkedIn"
                     className={styles.icon}
                   />
                 </div>
                 <div className={styles.iconButton}>
                   <img
-                    src={twitterIcon}
+                    src="/assets/icons/twitter.svg"
                     alt="Twitter"
                     className={styles.icon}
                   />
                 </div>
                 <div className={styles.iconButton}>
-                  <img src={mailIcon} alt="Contact" className={styles.icon} />
+                  <img
+                    src="/assets/icons/mail.svg"
+                    alt="Contact"
+                    className={styles.icon}
+                  />
                 </div>
               </div>
               <div className={styles.profileImage}>
                 <img
-                  src={userIcon}
+                  src="/assets/icons/user.svg"
                   alt="Profile"
                   className={styles.profilePic}
                 />
@@ -87,7 +92,7 @@ export default function ClaraPortfolio() {
                 <div className={styles.heroContainer}>
                   <div className={styles.heroBackground}>
                     <img
-                      src={heroBg}
+                      src="/assets/images/hero-bg.svg"
                       alt="Hero Background"
                       className={styles.heroImage}
                     />
@@ -122,7 +127,7 @@ export default function ClaraPortfolio() {
                   <div className={styles.projectsGrid}>
                     <div className={styles.projectCard}>
                       <img
-                        src={project1}
+                        src="/assets/images/project1.svg"
                         alt="Project Alpha"
                         className={styles.projectImage}
                       />
@@ -136,7 +141,7 @@ export default function ClaraPortfolio() {
                     </div>
                     <div className={styles.projectCard}>
                       <img
-                        src={project2}
+                        src="/assets/images/project2.svg"
                         alt="Project Beta"
                         className={styles.projectImage}
                       />
@@ -150,7 +155,7 @@ export default function ClaraPortfolio() {
                     </div>
                     <div className={styles.projectCard}>
                       <img
-                        src={project3}
+                        src="/assets/images/project3.svg"
                         alt="Project Gamma"
                         className={styles.projectImage}
                       />
@@ -170,17 +175,17 @@ export default function ClaraPortfolio() {
               <footer className={styles.footer}>
                 <div className={styles.footerIcons}>
                   <img
-                    src={githubIcon}
+                    src="/assets/icons/github.svg"
                     alt="GitHub"
                     className={styles.footerIcon}
                   />
                   <img
-                    src={linkedinIcon}
+                    src="/assets/icons/linkedin.svg"
                     alt="LinkedIn"
                     className={styles.footerIcon}
                   />
                   <img
-                    src={twitterIcon}
+                    src="/assets/icons/twitter.svg"
                     alt="Twitter"
                     className={styles.footerIcon}
                   />
