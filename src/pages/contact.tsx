@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import PageLayout from "../components/PageLayout";
 import styles from "../styles/contact.module.css";
 import commonStyles from "../styles/common.module.css";
-import mailIcon from "../assets/icons/mail.svg";
-import linkedinIcon from "../assets/icons/linkedin.svg";
-import twitterIcon from "../assets/icons/twitter.svg";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -40,12 +37,14 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className={commonStyles.heroSection}>
         <div className={commonStyles.heroContent}>
-          <h1 className={commonStyles.heroTitle}>Let's Work Together</h1>
+          <h1 className={commonStyles.heroTitle}>
+            Let's Build Something Amazing
+          </h1>
           <p className={commonStyles.heroDescription}>
-            I'm always excited to collaborate on innovative projects and help
-            bring great ideas to life. Whether you need a complete product
-            redesign, design system, or UX consultation, I'd love to hear about
-            your project.
+            I'm always excited to collaborate on innovative software projects
+            and help turn great ideas into reality. Whether you need a
+            full-stack application, API development, cloud architecture, or
+            technical consultation, I'd love to hear about your project.
           </p>
           <div className={styles.heroStats}>
             <div className={styles.statItem}>
@@ -135,9 +134,12 @@ export default function ContactPage() {
                     <option value="">Select project type</option>
                     <option value="web-app">Web Application</option>
                     <option value="mobile-app">Mobile App</option>
-                    <option value="design-system">Design System</option>
-                    <option value="ux-audit">UX Audit</option>
-                    <option value="consultation">Consultation</option>
+                    <option value="api-development">API Development</option>
+                    <option value="cloud-architecture">
+                      Cloud Architecture
+                    </option>
+                    <option value="microservices">Microservices</option>
+                    <option value="consultation">Technical Consultation</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
@@ -195,7 +197,7 @@ export default function ContactPage() {
                   onChange={handleInputChange}
                   className={styles.formTextarea}
                   required
-                  placeholder="Tell me about your project, goals, and any specific challenges you're facing..."
+                  placeholder="Tell me about your project, technical requirements, and any specific challenges you're facing..."
                   rows={6}
                 />
               </div>
@@ -213,11 +215,23 @@ export default function ContactPage() {
             <div className={styles.contactMethods}>
               <div className={styles.contactMethod}>
                 <div className={styles.methodIcon}>
-                  <img src={mailIcon} alt="Email" />
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
                 </div>
                 <div className={styles.methodContent}>
                   <h3 className={styles.methodTitle}>Email</h3>
-                  <p className={styles.methodText}>sophie.carter@email.com</p>
+                  <p className={styles.methodText}>sifat.syed@email.com</p>
                   <p className={styles.methodNote}>
                     Best for project inquiries
                   </p>
@@ -226,24 +240,48 @@ export default function ContactPage() {
 
               <div className={styles.contactMethod}>
                 <div className={styles.methodIcon}>
-                  <img src={linkedinIcon} alt="LinkedIn" />
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect x="2" y="9" width="4" height="12" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
                 </div>
                 <div className={styles.methodContent}>
                   <h3 className={styles.methodTitle}>LinkedIn</h3>
-                  <p className={styles.methodText}>@sophiecarter</p>
+                  <p className={styles.methodText}>@sifatsyed</p>
                   <p className={styles.methodNote}>Professional networking</p>
                 </div>
               </div>
 
               <div className={styles.contactMethod}>
                 <div className={styles.methodIcon}>
-                  <img src={twitterIcon} alt="Twitter" />
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                  </svg>
                 </div>
                 <div className={styles.methodContent}>
-                  <h3 className={styles.methodTitle}>Twitter</h3>
-                  <p className={styles.methodText}>@sophiedesigns</p>
+                  <h3 className={styles.methodTitle}>GitHub</h3>
+                  <p className={styles.methodText}>@sifatsyed</p>
                   <p className={styles.methodNote}>
-                    Design thoughts & inspiration
+                    Code samples & open source
                   </p>
                 </div>
               </div>
@@ -280,9 +318,11 @@ export default function ContactPage() {
                 <div className={styles.expectationItem}>
                   <span className={styles.expectationNumber}>02</span>
                   <div className={styles.expectationContent}>
-                    <h4 className={styles.expectationTitle}>Discovery Call</h4>
+                    <h4 className={styles.expectationTitle}>
+                      Technical Discussion
+                    </h4>
                     <p className={styles.expectationText}>
-                      30-minute call to discuss your project
+                      30-minute call to discuss technical requirements
                     </p>
                   </div>
                 </div>
@@ -291,7 +331,7 @@ export default function ContactPage() {
                   <div className={styles.expectationContent}>
                     <h4 className={styles.expectationTitle}>Custom Proposal</h4>
                     <p className={styles.expectationText}>
-                      Detailed proposal with timeline & pricing
+                      Detailed proposal with architecture & timeline
                     </p>
                   </div>
                 </div>
@@ -307,12 +347,13 @@ export default function ContactPage() {
         <div className={styles.faqGrid}>
           <div className={styles.faqItem}>
             <h3 className={styles.faqQuestion}>
-              What's your design process like?
+              What's your development process like?
             </h3>
             <p className={styles.faqAnswer}>
-              I follow a user-centered design approach: research, ideation,
-              prototyping, testing, and iteration. Every project starts with
-              understanding your users and business goals.
+              I follow agile development practices: requirements analysis,
+              architecture design, iterative development, testing, and
+              deployment. Every project starts with understanding your technical
+              needs and business goals.
             </p>
           </div>
           <div className={styles.faqItem}>
@@ -320,27 +361,29 @@ export default function ContactPage() {
               How long do projects typically take?
             </h3>
             <p className={styles.faqAnswer}>
-              It varies by scope: design systems (3-6 months), app redesigns
-              (2-4 months), UX audits (2-4 weeks). I'll provide a detailed
-              timeline in the proposal.
+              It varies by scope: APIs (2-6 weeks), web applications (2-4
+              months), complex systems (4-8 months), microservices migration
+              (3-6 months). I'll provide a detailed timeline in the proposal.
             </p>
           </div>
           <div className={styles.faqItem}>
             <h3 className={styles.faqQuestion}>
-              Do you work with development teams?
+              Do you work with existing development teams?
             </h3>
             <p className={styles.faqAnswer}>
-              Absolutely! I collaborate closely with developers and provide
-              detailed specs, design systems, and ongoing support during
-              implementation.
+              Absolutely! I collaborate closely with existing teams, provide
+              code reviews, architecture guidance, and can integrate seamlessly
+              with your current development workflows and CI/CD processes.
             </p>
           </div>
           <div className={styles.faqItem}>
-            <h3 className={styles.faqQuestion}>What tools do you use?</h3>
+            <h3 className={styles.faqQuestion}>
+              What technologies do you specialize in?
+            </h3>
             <p className={styles.faqAnswer}>
-              Primarily Figma for design, with additional tools like Principle
-              for prototyping, Miro for collaboration, and various user research
-              platforms.
+              I specialize in Node.js, React, TypeScript, Python, AWS, Docker,
+              Kubernetes, PostgreSQL, and MongoDB. I'm also experienced with
+              microservices architecture and cloud-native development.
             </p>
           </div>
         </div>

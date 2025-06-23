@@ -10,89 +10,89 @@ export default function BlogPage() {
     {
       id: 1,
       category: "lessons",
-      title: "What I Learned from My First Design System Failure",
+      title: "What I Learned from My First Microservices Failure",
       excerpt:
-        "Building my first design system taught me more through failure than success. Here are the hard lessons that made me a better designer.",
+        "Building my first microservices architecture taught me more through failure than success. Here are the hard lessons that made me a better engineer.",
       date: "Dec 15, 2024",
-      readTime: "5 min read",
-      tags: ["Design Systems", "Lessons Learned"],
+      readTime: "7 min read",
+      tags: ["Microservices", "Architecture", "Lessons Learned"],
       featured: true,
     },
     {
       id: 2,
       category: "hobbies",
-      title: "Guitar, Coffee, and Creative Flow",
+      title: "Coffee, Code, and Creative Problem Solving",
       excerpt:
-        "How my morning routine of playing guitar and brewing the perfect cup sets the tone for my most creative design days.",
+        "How my morning routine of brewing the perfect cup and tackling coding challenges sets the tone for my most productive development days.",
       date: "Dec 10, 2024",
-      readTime: "3 min read",
-      tags: ["Creativity", "Personal", "Routine"],
+      readTime: "4 min read",
+      tags: ["Productivity", "Personal", "Routine"],
       featured: false,
     },
     {
       id: 3,
       category: "insights",
-      title: "The Psychology Behind Intuitive Interfaces",
+      title: "The Art of Writing Clean, Maintainable Code",
       excerpt:
-        "Understanding cognitive load and mental models to create interfaces that feel like second nature to users.",
+        "Exploring principles and practices that make code not just functional, but elegant, readable, and maintainable for years to come.",
       date: "Dec 5, 2024",
-      readTime: "7 min read",
-      tags: ["UX Psychology", "Interface Design"],
+      readTime: "8 min read",
+      tags: ["Clean Code", "Best Practices", "Software Architecture"],
       featured: true,
     },
     {
       id: 4,
       category: "behind-scenes",
-      title: "A Day in My Design Process",
+      title: "A Day in My Development Workflow",
       excerpt:
-        "Take a peek behind the curtain of how I approach a typical day, from research to final designs.",
+        "Take a peek behind the curtain of how I approach a typical day, from planning to deployment and everything in between.",
       date: "Nov 28, 2024",
-      readTime: "4 min read",
-      tags: ["Process", "Day in Life"],
+      readTime: "5 min read",
+      tags: ["Workflow", "Day in Life", "Development"],
       featured: false,
     },
     {
       id: 5,
       category: "lessons",
-      title: "Why I Started Saying No to Design Trends",
+      title: "Why I Stopped Chasing the Latest JavaScript Framework",
       excerpt:
-        "The liberating realization that timeless design principles matter more than following every new trend.",
+        "The liberating realization that mastering fundamentals matters more than following every new framework that comes along.",
       date: "Nov 22, 2024",
       readTime: "6 min read",
-      tags: ["Design Philosophy", "Trends"],
+      tags: ["JavaScript", "Frameworks", "Learning"],
       featured: false,
     },
     {
       id: 6,
       category: "hobbies",
-      title: "Marathon Training Taught Me About UX",
+      title: "Marathon Training Taught Me About Software Development",
       excerpt:
-        "Unexpected parallels between long-distance running and user experience design that changed my approach.",
+        "Unexpected parallels between long-distance running and software engineering that changed my approach to building systems.",
       date: "Nov 15, 2024",
       readTime: "5 min read",
-      tags: ["Personal Growth", "UX Lessons"],
+      tags: ["Personal Growth", "Endurance", "Development"],
       featured: false,
     },
     {
       id: 7,
       category: "insights",
-      title: "Accessibility is Not an Afterthought",
+      title: "Security is Not an Afterthought",
       excerpt:
-        "Why inclusive design from day one creates better products for everyone, not just users with disabilities.",
+        "Why building security from day one creates better software for everyone, not just users who are security-conscious.",
       date: "Nov 8, 2024",
-      readTime: "8 min read",
-      tags: ["Accessibility", "Inclusive Design"],
+      readTime: "9 min read",
+      tags: ["Security", "Best Practices", "DevSecOps"],
       featured: true,
     },
     {
       id: 8,
       category: "behind-scenes",
-      title: "My Home Office Setup for Deep Work",
+      title: "My Home Office Setup for Deep Development Work",
       excerpt:
-        "How I designed my workspace to minimize distractions and maximize creative flow and productivity.",
+        "How I designed my workspace to minimize distractions and maximize focus for complex problem-solving and coding sessions.",
       date: "Oct 30, 2024",
       readTime: "4 min read",
-      tags: ["Productivity", "Workspace"],
+      tags: ["Productivity", "Workspace", "Focus"],
       featured: false,
     },
   ];
@@ -100,8 +100,8 @@ export default function BlogPage() {
   const filters = [
     { key: "all", label: "All Posts" },
     { key: "lessons", label: "Lessons Learned" },
-    { key: "hobbies", label: "Hobbies & Life" },
-    { key: "insights", label: "Design Insights" },
+    { key: "hobbies", label: "Life & Hobbies" },
+    { key: "insights", label: "Tech Insights" },
     { key: "behind-scenes", label: "Behind the Scenes" },
   ];
 
@@ -118,23 +118,24 @@ export default function BlogPage() {
       {/* Hero Section */}
       <section className={styles.heroSection}>
         <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>Insights & Stories</h1>
+          <h1 className={styles.heroTitle}>Code & Life</h1>
           <p className={styles.heroDescription}>
-            A collection of design insights, lessons learned, personal stories,
-            and behind-the-scenes glimpses into my creative process. Welcome to
-            my little corner of the internet.
+            A collection of technical insights, lessons learned from building
+            software, personal stories, and behind-the-scenes glimpses into my
+            development process. Welcome to my little corner of the engineering
+            world.
           </p>
           <div className={styles.heroStats}>
             <div className={styles.statItem}>
-              <span className={styles.statNumber}>24</span>
+              <span className={styles.statNumber}>32</span>
               <span className={styles.statLabel}>Articles Written</span>
             </div>
             <div className={styles.statItem}>
-              <span className={styles.statNumber}>12K</span>
-              <span className={styles.statLabel}>Readers</span>
+              <span className={styles.statNumber}>18K</span>
+              <span className={styles.statLabel}>Developers Reading</span>
             </div>
             <div className={styles.statItem}>
-              <span className={styles.statNumber}>6</span>
+              <span className={styles.statNumber}>8</span>
               <span className={styles.statLabel}>Categories</span>
             </div>
           </div>
@@ -164,7 +165,7 @@ export default function BlogPage() {
       {/* Featured Posts */}
       {activeFilter === "all" && (
         <section className={styles.featuredSection}>
-          <h2 className={styles.sectionTitle}>Featured Stories</h2>
+          <h2 className={styles.sectionTitle}>Featured Articles</h2>
           <div className={styles.featuredGrid}>
             {featuredPosts.slice(0, 3).map((post) => (
               <article key={post.id} className={styles.featuredCard}>
@@ -238,17 +239,17 @@ export default function BlogPage() {
           <div className={styles.aboutBlogGrid}>
             <div className={styles.aboutBlogText}>
               <p className={styles.aboutBlogDescription}>
-                This is my space to share the unfiltered truth about design
-                work—the victories, failures, random inspirations, and
-                everything in between. You'll find design insights mixed with
-                personal stories, hobby adventures, and honest reflections on
-                what I've learned.
+                This is my space to share the unfiltered truth about software
+                engineering—the victories, failures, random insights, and
+                everything in between. You'll find technical deep dives mixed
+                with personal stories, learning adventures, and honest
+                reflections on what I've discovered building software.
               </p>
               <p className={styles.aboutBlogDescription}>
-                I believe the best design comes from a full life, so I write
-                about running marathons, perfecting coffee brewing techniques,
-                playing guitar, and how these experiences shape my approach to
-                design challenges.
+                I believe the best code comes from a full life, so I write about
+                running marathons, perfecting coffee brewing techniques,
+                debugging production issues at 3 AM, and how these experiences
+                shape my approach to engineering challenges.
               </p>
             </div>
             <div className={styles.aboutBlogSidebar}>
@@ -264,13 +265,14 @@ export default function BlogPage() {
                 </div>
                 <div className={styles.blogStat}>
                   <span className={styles.blogStatLabel}>Average Length</span>
-                  <span className={styles.blogStatValue}>5 min read</span>
+                  <span className={styles.blogStatValue}>6 min read</span>
                 </div>
               </div>
               <div className={styles.subscribeBox}>
                 <h3 className={styles.subscribeTitle}>Stay Updated</h3>
                 <p className={styles.subscribeDescription}>
-                  Get notified when I publish new stories and insights.
+                  Get notified when I publish new articles and technical
+                  insights.
                 </p>
                 <button className={styles.subscribeButton}>Subscribe</button>
               </div>

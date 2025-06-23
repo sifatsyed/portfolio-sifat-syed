@@ -2,7 +2,6 @@ import React from "react";
 import PageLayout from "../components/PageLayout";
 import styles from "../styles/about.module.css";
 import commonStyles from "../styles/common.module.css";
-import userIcon from "../assets/icons/user.svg";
 
 export default function AboutPage() {
   return (
@@ -11,24 +10,34 @@ export default function AboutPage() {
       <section className={commonStyles.heroSection}>
         <div className={commonStyles.heroContent}>
           <div className={styles.heroText}>
-            <h1 className={commonStyles.heroTitle}>Hi, I'm Sophie Carter</h1>
+            <h1 className={commonStyles.heroTitle}>Hi, I'm Sifat Syed</h1>
             <p className={styles.heroSubtitle}>
-              Senior Product Designer & Creative Problem Solver
+              Senior Software Engineer & System Architect
             </p>
             <p className={commonStyles.heroDescription}>
-              I'm passionate about creating meaningful digital experiences that
-              solve real problems. With over 6 years of experience in product
-              design, I specialize in turning complex challenges into intuitive,
-              user-centered solutions.
+              I'm passionate about building scalable, maintainable software
+              systems that solve real-world problems. With over 5 years of
+              experience in full-stack development, I specialize in creating
+              robust applications, designing efficient APIs, and implementing
+              cloud-native solutions.
             </p>
           </div>
           <div className={styles.heroImage}>
             <div className={styles.profileImageLarge}>
-              <img
-                src={userIcon}
-                alt="Sophie Carter"
+              <svg
+                width="120"
+                height="120"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className={styles.profilePic}
-              />
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
             </div>
           </div>
         </div>
@@ -36,25 +45,26 @@ export default function AboutPage() {
 
       {/* Story Section */}
       <section className={commonStyles.section}>
-        <h2 className={commonStyles.sectionTitle}>My Story</h2>
+        <h2 className={commonStyles.sectionTitle}>My Journey</h2>
         <div className={styles.storyContent}>
           <p className={styles.storyText}>
-            My journey into design began during my college years when I
-            discovered the perfect intersection between creativity and
-            technology. What started as a curiosity about how digital products
-            work evolved into a passion for making them better.
+            My journey into software engineering began in college when I wrote
+            my first "Hello World" program. What started as curiosity about how
+            computers work evolved into a passion for creating solutions that
+            impact millions of users.
           </p>
           <p className={styles.storyText}>
-            I believe great design is invisible—it solves problems so elegantly
-            that users don't have to think about it. Throughout my career, I've
-            had the privilege of working with amazing teams to create products
-            that millions of people use every day.
+            I believe great software is not just about writing code—it's about
+            understanding the problem deeply, designing elegant solutions, and
+            building systems that can scale. Throughout my career, I've had the
+            opportunity to work on everything from startup MVPs to
+            enterprise-scale distributed systems.
           </p>
           <p className={styles.storyText}>
-            When I'm not designing, you'll find me exploring local coffee shops,
-            reading design books, or experimenting with new creative tools. I'm
-            always eager to learn and push the boundaries of what's possible in
-            design.
+            When I'm not coding, you'll find me contributing to open source
+            projects, reading about emerging technologies, or experimenting with
+            new programming languages. I'm always excited to learn and push the
+            boundaries of what's possible with technology.
           </p>
         </div>
       </section>
@@ -64,38 +74,39 @@ export default function AboutPage() {
         <h2 className={commonStyles.sectionTitle}>What Drives Me</h2>
         <div className={styles.valuesGrid}>
           <div className={styles.valueCard}>
-            <div className={styles.valueIcon}>🎨</div>
-            <h3 className={styles.valueTitle}>User-Centered Design</h3>
+            <div className={styles.valueIcon}>🚀</div>
+            <h3 className={styles.valueTitle}>Performance & Scalability</h3>
             <p className={styles.valueDescription}>
-              Every design decision starts with understanding the user's needs,
-              goals, and pain points. I believe in creating experiences that
-              feel natural and intuitive.
+              I'm obsessed with writing efficient code and designing systems
+              that can handle growth. Every line of code should serve a purpose
+              and contribute to the overall system performance.
             </p>
           </div>
           <div className={styles.valueCard}>
-            <div className={styles.valueIcon}>🚀</div>
-            <h3 className={styles.valueTitle}>Innovation</h3>
+            <div className={styles.valueIcon}>🔧</div>
+            <h3 className={styles.valueTitle}>Clean Architecture</h3>
             <p className={styles.valueDescription}>
-              I love exploring new design patterns, emerging technologies, and
-              creative solutions that push the boundaries of what's possible.
+              I believe in writing code that's not just functional, but also
+              maintainable, testable, and easy to understand. Clean architecture
+              principles guide every design decision I make.
             </p>
           </div>
           <div className={styles.valueCard}>
             <div className={styles.valueIcon}>🤝</div>
             <h3 className={styles.valueTitle}>Collaboration</h3>
             <p className={styles.valueDescription}>
-              Great products are built by great teams. I thrive in collaborative
-              environments where diverse perspectives come together to solve
-              problems.
+              Great software is built by great teams. I thrive in collaborative
+              environments where knowledge sharing, code reviews, and pair
+              programming are part of the culture.
             </p>
           </div>
           <div className={styles.valueCard}>
             <div className={styles.valueIcon}>📈</div>
-            <h3 className={styles.valueTitle}>Impact</h3>
+            <h3 className={styles.valueTitle}>Continuous Learning</h3>
             <p className={styles.valueDescription}>
-              I'm motivated by creating designs that make a real
-              difference—whether that's improving conversion rates or making
-              someone's day a little easier.
+              Technology evolves rapidly, and I'm committed to staying current.
+              Whether it's learning a new framework, attending conferences, or
+              reading research papers, I never stop learning.
             </p>
           </div>
         </div>
@@ -108,37 +119,37 @@ export default function AboutPage() {
           <div className={styles.factItem}>
             <span className={styles.factEmoji}>☕</span>
             <span className={styles.factText}>
-              I've tried coffee from over 30 different countries
+              I've debugged more issues fueled by coffee than I care to count
             </span>
           </div>
           <div className={styles.factItem}>
             <span className={styles.factEmoji}>📚</span>
             <span className={styles.factText}>
-              I read at least 2 design books every month
+              I read at least 2 technical books every month
             </span>
           </div>
           <div className={styles.factItem}>
-            <span className={styles.factEmoji}>🎸</span>
+            <span className={styles.factEmoji}>🎮</span>
             <span className={styles.factText}>
-              I play guitar and write songs in my spare time
+              I built my first game in Python when I was 16
             </span>
           </div>
           <div className={styles.factItem}>
             <span className={styles.factEmoji}>🌱</span>
             <span className={styles.factText}>
-              I have a small indoor garden with 15+ plants
+              I contribute to open source projects in my spare time
             </span>
           </div>
           <div className={styles.factItem}>
-            <span className={styles.factEmoji}>🏃‍♀️</span>
+            <span className={styles.factEmoji}>🏃‍♂️</span>
             <span className={styles.factText}>
-              I've completed 3 marathons and counting
+              I've participated in 5 hackathons and won 3 of them
             </span>
           </div>
           <div className={styles.factItem}>
             <span className={styles.factEmoji}>🎨</span>
             <span className={styles.factText}>
-              I collect vintage design posters from the 1960s
+              I enjoy creating side projects that solve everyday problems
             </span>
           </div>
         </div>
@@ -146,44 +157,47 @@ export default function AboutPage() {
 
       {/* Skills & Tools */}
       <section className={styles.skillsSection}>
-        <h2 className={styles.sectionTitle}>Skills & Tools</h2>
+        <h2 className={styles.sectionTitle}>Skills & Technologies</h2>
         <div className={styles.skillsCategories}>
           <div className={styles.skillCategory}>
-            <h3 className={styles.categoryTitle}>Design</h3>
+            <h3 className={styles.categoryTitle}>Backend</h3>
             <div className={styles.skillTags}>
-              <span className={styles.skillTag}>UI/UX Design</span>
-              <span className={styles.skillTag}>Visual Design</span>
-              <span className={styles.skillTag}>Interaction Design</span>
-              <span className={styles.skillTag}>Design Systems</span>
-              <span className={styles.skillTag}>Branding</span>
+              <span className={styles.skillTag}>Node.js</span>
+              <span className={styles.skillTag}>Python</span>
+              <span className={styles.skillTag}>Java</span>
+              <span className={styles.skillTag}>Go</span>
+              <span className={styles.skillTag}>Express.js</span>
+              <span className={styles.skillTag}>FastAPI</span>
             </div>
           </div>
           <div className={styles.skillCategory}>
-            <h3 className={styles.categoryTitle}>Research</h3>
+            <h3 className={styles.categoryTitle}>Frontend</h3>
             <div className={styles.skillTags}>
-              <span className={styles.skillTag}>User Research</span>
-              <span className={styles.skillTag}>Usability Testing</span>
-              <span className={styles.skillTag}>A/B Testing</span>
-              <span className={styles.skillTag}>Analytics</span>
-            </div>
-          </div>
-          <div className={styles.skillCategory}>
-            <h3 className={styles.categoryTitle}>Tools</h3>
-            <div className={styles.skillTags}>
-              <span className={styles.skillTag}>Figma</span>
-              <span className={styles.skillTag}>Sketch</span>
-              <span className={styles.skillTag}>Adobe Creative Suite</span>
-              <span className={styles.skillTag}>Principle</span>
-              <span className={styles.skillTag}>Framer</span>
-            </div>
-          </div>
-          <div className={styles.skillCategory}>
-            <h3 className={styles.categoryTitle}>Development</h3>
-            <div className={styles.skillTags}>
-              <span className={styles.skillTag}>HTML/CSS</span>
-              <span className={styles.skillTag}>JavaScript</span>
               <span className={styles.skillTag}>React</span>
-              <span className={styles.skillTag}>Design Tokens</span>
+              <span className={styles.skillTag}>TypeScript</span>
+              <span className={styles.skillTag}>Next.js</span>
+              <span className={styles.skillTag}>Vue.js</span>
+              <span className={styles.skillTag}>TailwindCSS</span>
+            </div>
+          </div>
+          <div className={styles.skillCategory}>
+            <h3 className={styles.categoryTitle}>Database</h3>
+            <div className={styles.skillTags}>
+              <span className={styles.skillTag}>PostgreSQL</span>
+              <span className={styles.skillTag}>MongoDB</span>
+              <span className={styles.skillTag}>Redis</span>
+              <span className={styles.skillTag}>Elasticsearch</span>
+            </div>
+          </div>
+          <div className={styles.skillCategory}>
+            <h3 className={styles.categoryTitle}>Cloud & DevOps</h3>
+            <div className={styles.skillTags}>
+              <span className={styles.skillTag}>AWS</span>
+              <span className={styles.skillTag}>Docker</span>
+              <span className={styles.skillTag}>Kubernetes</span>
+              <span className={styles.skillTag}>Terraform</span>
+              <span className={styles.skillTag}>GitHub Actions</span>
+              <span className={styles.skillTag}>Jenkins</span>
             </div>
           </div>
         </div>
@@ -193,16 +207,16 @@ export default function AboutPage() {
       <section className={styles.ctaSection}>
         <div className={styles.ctaContent}>
           <h2 className={styles.ctaTitle}>
-            Let's Create Something Amazing Together
+            Let's Build Something Amazing Together
           </h2>
           <p className={styles.ctaDescription}>
-            I'm always excited to work on new projects and collaborate with
-            passionate teams. Whether you have a project in mind or just want to
-            chat about design, I'd love to hear from you.
+            I'm always excited to work on challenging projects and collaborate
+            with talented teams. Whether you have a complex problem to solve or
+            want to discuss the latest in tech, I'd love to connect.
           </p>
           <div className={styles.ctaButtons}>
             <button className={styles.primaryButton}>Get In Touch</button>
-            <button className={styles.secondaryButton}>View My Work</button>
+            <button className={styles.secondaryButton}>View My Projects</button>
           </div>
         </div>
       </section>

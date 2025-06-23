@@ -3,98 +3,85 @@ import Link from "next/link";
 import PageLayout from "../components/PageLayout";
 import styles from "../styles/projects.module.css";
 import commonStyles from "../styles/common.module.css";
-import project1 from "../assets/images/project1.svg";
-import project2 from "../assets/images/project2.svg";
-import project3 from "../assets/images/project3.svg";
 
 const projects = [
   {
-    id: "designsystem-2024",
-    title: "Enterprise Design System",
-    category: "Design Systems",
+    id: "ecommerce-microservices",
+    title: "E-Commerce Microservices Platform",
+    category: "Microservices",
     year: "2024",
     description:
-      "A comprehensive design system that unified the visual language across 15+ products, reducing design debt by 60% and increasing development velocity.",
-    image: project1,
-    tags: ["Design Systems", "Figma", "React", "Documentation"],
+      "A scalable microservices architecture serving 2M+ users with 99.9% uptime. Built with Node.js, Docker, and Kubernetes, featuring auto-scaling and event-driven communication.",
+    tags: ["Node.js", "Docker", "Kubernetes", "Microservices", "AWS"],
     status: "Live",
     duration: "8 months",
-    role: "Lead Designer",
+    role: "Lead Developer",
+    tech: "Node.js, TypeScript, Docker, Kubernetes, PostgreSQL, Redis",
   },
   {
-    id: "mobile-banking-app",
-    title: "Mobile Banking Redesign",
-    category: "Mobile App",
-    year: "2023",
-    description:
-      "Complete redesign of a banking mobile app that improved user satisfaction by 45% and reduced support tickets by 30%.",
-    image: project2,
-    tags: ["Mobile Design", "User Research", "Prototyping", "iOS/Android"],
-    status: "Live",
-    duration: "6 months",
-    role: "Senior Product Designer",
-  },
-  {
-    id: "ai-dashboard",
-    title: "AI Analytics Dashboard",
+    id: "realtime-analytics",
+    title: "Real-time Analytics Dashboard",
     category: "Web Application",
     year: "2023",
     description:
-      "An intuitive dashboard for AI-powered analytics that helps businesses make data-driven decisions with complex machine learning insights.",
-    image: project3,
-    tags: ["Dashboard Design", "Data Visualization", "AI/ML", "SaaS"],
+      "A real-time analytics platform processing 10M+ events daily using React, WebSocket connections, and Apache Kafka. Reduced data processing latency by 75%.",
+    tags: ["React", "TypeScript", "Apache Kafka", "WebSocket", "PostgreSQL"],
+    status: "Live",
+    duration: "6 months",
+    role: "Full Stack Developer",
+    tech: "React, TypeScript, Node.js, Apache Kafka, PostgreSQL",
+  },
+  {
+    id: "ai-code-review",
+    title: "AI-Powered Code Review Tool",
+    category: "DevOps",
+    year: "2023",
+    description:
+      "An automated code review system using machine learning algorithms and AST parsing. Integrated with GitHub Actions and reduced manual review time by 60%.",
+    tags: ["Python", "Machine Learning", "GitHub Actions", "AST", "CI/CD"],
     status: "Live",
     duration: "4 months",
-    role: "Product Designer",
+    role: "Backend Developer",
+    tech: "Python, FastAPI, Machine Learning, GitHub Actions, Docker",
   },
   {
-    id: "ecommerce-platform",
-    title: "E-commerce Platform",
-    category: "E-commerce",
+    id: "cloud-infrastructure",
+    title: "Cloud Infrastructure Automation",
+    category: "DevOps",
     year: "2022",
     description:
-      "A modern e-commerce platform that increased conversion rates by 35% through improved UX and streamlined checkout process.",
-    image: project1,
-    tags: [
-      "E-commerce",
-      "Conversion Optimization",
-      "User Journey",
-      "A/B Testing",
-    ],
+      "Designed and implemented Infrastructure as Code using Terraform and AWS. Automated CI/CD pipelines reducing deployment time from hours to minutes.",
+    tags: ["AWS", "Terraform", "CI/CD", "DevOps", "Infrastructure"],
     status: "Live",
-    duration: "10 months",
-    role: "UX Designer",
+    duration: "5 months",
+    role: "DevOps Engineer",
+    tech: "AWS, Terraform, Jenkins, Docker, Kubernetes",
   },
   {
-    id: "healthcare-portal",
-    title: "Patient Health Portal",
-    category: "Healthcare",
+    id: "blockchain-wallet",
+    title: "Cryptocurrency Wallet API",
+    category: "Blockchain",
     year: "2022",
     description:
-      "A patient-centered health portal that improved appointment scheduling efficiency by 50% and patient engagement by 40%.",
-    image: project2,
-    tags: [
-      "Healthcare",
-      "Accessibility",
-      "HIPAA Compliance",
-      "Patient Experience",
-    ],
+      "A secure blockchain wallet API supporting multiple cryptocurrencies. Implemented advanced security measures and achieved SOC 2 compliance.",
+    tags: ["Blockchain", "Security", "API", "Cryptography", "Node.js"],
     status: "Live",
     duration: "7 months",
-    role: "Senior UX Designer",
+    role: "Blockchain Developer",
+    tech: "Node.js, Web3.js, Solidity, PostgreSQL, Redis",
   },
   {
-    id: "fintech-wallet",
-    title: "Digital Wallet App",
-    category: "Fintech",
+    id: "social-media-api",
+    title: "Social Media Platform API",
+    category: "API",
     year: "2021",
     description:
-      "A secure digital wallet that simplified peer-to-peer payments and achieved 1M+ downloads in the first 6 months.",
-    image: project3,
-    tags: ["Fintech", "Mobile App", "Security", "Payment Systems"],
+      "A high-performance REST API serving 500K+ daily active users. Implemented efficient caching strategies and real-time notifications.",
+    tags: ["Node.js", "Express", "MongoDB", "Redis", "WebSocket"],
     status: "Live",
     duration: "9 months",
-    role: "Product Designer",
+    role: "Backend Developer",
+    tech: "Node.js, Express.js, MongoDB, Redis, Socket.io",
   },
 ];
 
@@ -109,22 +96,22 @@ export default function ProjectsPage() {
         <div className={commonStyles.heroContent}>
           <h1 className={commonStyles.heroTitle}>My Projects</h1>
           <p className={commonStyles.heroDescription}>
-            A collection of design projects that showcase my approach to solving
-            complex problems through user-centered design, creative thinking,
-            and strategic innovation.
+            A collection of software engineering projects that showcase my
+            approach to solving complex technical problems through scalable
+            architecture, clean code, and innovative solutions.
           </p>
           <div className={styles.heroStats}>
             <div className={styles.statItem}>
-              <span className={styles.statNumber}>15+</span>
-              <span className={styles.statLabel}>Projects Completed</span>
+              <span className={styles.statNumber}>20+</span>
+              <span className={styles.statLabel}>Projects Built</span>
             </div>
             <div className={styles.statItem}>
-              <span className={styles.statNumber}>6</span>
+              <span className={styles.statNumber}>5</span>
               <span className={styles.statLabel}>Years Experience</span>
             </div>
             <div className={styles.statItem}>
-              <span className={styles.statNumber}>50M+</span>
-              <span className={styles.statLabel}>Users Impacted</span>
+              <span className={styles.statNumber}>10M+</span>
+              <span className={styles.statLabel}>Users Served</span>
             </div>
           </div>
         </div>
@@ -134,24 +121,43 @@ export default function ProjectsPage() {
       <section className={styles.featuredSection}>
         <h2 className={styles.sectionTitle}>Featured Projects</h2>
         <p className={styles.sectionDescription}>
-          Explore my most impactful work that demonstrates innovation,
-          user-centered design, and measurable business results.
+          Explore my most impactful work that demonstrates scalable
+          architecture, performance optimization, and engineering excellence.
         </p>
         <div className={styles.featuredGrid}>
           {featuredProjects.map((project) => (
-            <Link
-              key={project.id}
-              href={`/projects/${project.id}`}
-              className={styles.featuredCard}
-            >
+            <div key={project.id} className={styles.featuredCard}>
               <div className={styles.projectImageContainer}>
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className={styles.projectImage}
-                />
+                <div className={styles.projectImagePlaceholder}>
+                  <svg
+                    width="60"
+                    height="60"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <rect
+                      x="2"
+                      y="2"
+                      width="20"
+                      height="20"
+                      rx="2.18"
+                      ry="2.18"
+                    />
+                    <line x1="7" y1="2" x2="7" y2="22" />
+                    <line x1="17" y1="2" x2="17" y2="22" />
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <line x1="2" y1="7" x2="7" y2="7" />
+                    <line x1="2" y1="17" x2="7" y2="17" />
+                    <line x1="17" y1="17" x2="22" y2="17" />
+                    <line x1="17" y1="7" x2="22" y2="7" />
+                  </svg>
+                </div>
                 <div className={styles.projectOverlay}>
-                  <span className={styles.viewProject}>View Project →</span>
+                  <span className={styles.viewProject}>View Details →</span>
                 </div>
               </div>
               <div className={styles.projectInfo}>
@@ -165,6 +171,10 @@ export default function ProjectsPage() {
                 <p className={styles.projectDescription}>
                   {project.description}
                 </p>
+                <div className={styles.techStack}>
+                  <span className={styles.techLabel}>Tech Stack:</span>
+                  <span className={styles.techText}>{project.tech}</span>
+                </div>
                 <div className={styles.projectTags}>
                   {project.tags.slice(0, 3).map((tag) => (
                     <span key={tag} className={styles.projectTag}>
@@ -173,7 +183,7 @@ export default function ProjectsPage() {
                   ))}
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </section>
@@ -183,17 +193,23 @@ export default function ProjectsPage() {
         <h2 className={styles.sectionTitle}>All Projects</h2>
         <div className={styles.projectsGrid}>
           {allProjects.map((project) => (
-            <Link
-              key={project.id}
-              href={`/projects/${project.id}`}
-              className={styles.projectCard}
-            >
+            <div key={project.id} className={styles.projectCard}>
               <div className={styles.cardImageContainer}>
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className={styles.cardImage}
-                />
+                <div className={styles.cardImagePlaceholder}>
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="16 18 22 12 16 6" />
+                    <polyline points="8 6 2 12 8 18" />
+                  </svg>
+                </div>
                 <div className={styles.cardOverlay}>
                   <div className={styles.projectDetails}>
                     <span className={styles.duration}>{project.duration}</span>
@@ -213,6 +229,10 @@ export default function ProjectsPage() {
                 </div>
                 <h3 className={styles.cardTitle}>{project.title}</h3>
                 <p className={styles.cardDescription}>{project.description}</p>
+                <div className={styles.cardTechStack}>
+                  <span className={styles.techLabel}>Stack:</span>
+                  <span className={styles.cardTechText}>{project.tech}</span>
+                </div>
                 <div className={styles.cardTags}>
                   {project.tags.map((tag) => (
                     <span key={tag} className={styles.cardTag}>
@@ -221,7 +241,7 @@ export default function ProjectsPage() {
                   ))}
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </section>
@@ -229,10 +249,11 @@ export default function ProjectsPage() {
       {/* Call to Action */}
       <section className={styles.ctaSection}>
         <div className={styles.ctaContent}>
-          <h2 className={styles.ctaTitle}>Let's Work Together</h2>
+          <h2 className={styles.ctaTitle}>Let's Build Something Amazing</h2>
           <p className={styles.ctaDescription}>
-            Have a project in mind? I'd love to help bring your ideas to life
-            with thoughtful design and strategic thinking.
+            Have a technical challenge or software project in mind? I'd love to
+            help bring your ideas to life with robust architecture and clean,
+            scalable code.
           </p>
           <div className={styles.ctaButtons}>
             <button className={styles.primaryButton}>Start a Project</button>
