@@ -22,28 +22,39 @@ export default function ExperiencePage() {
       <div className={styles.experienceTimeline}>
         {experiences.map((experience, index) => (
           <div key={index} className={styles.experienceItem}>
-            <h2 className={styles.companyName}>{experience.company}</h2>
-            <div className={styles.roleInfo}>
-              {experience.role} | {experience.period}
-            </div>
-            <p className={styles.roleDescription}>{experience.description}</p>
-            <div className={styles.achievements}>
-              <h4>Key Achievements:</h4>
-              <ul>
-                {experience.achievements.map(
-                  (achievement, achievementIndex) => (
-                    <li key={achievementIndex}>{achievement}</li>
-                  ),
-                )}
-              </ul>
-            </div>
-            <div className={styles.skillTags}>
-              {experience.technologies.map((tech, techIndex) => (
-                <span key={techIndex} className={styles.skillTag}>
-                  {tech}
+            <div className={styles.experienceCard}>
+              <div className={styles.companyHeader}>
+                <h2 className={styles.companyName}>{experience.company}</h2>
+                <span className={styles.companyPeriod}>
+                  {experience.period}
                 </span>
-              ))}
+              </div>
+
+              <div className={styles.roleInfo}>{experience.role}</div>
+
+              <p className={styles.roleDescription}>{experience.description}</p>
+
+              <div className={styles.achievements}>
+                <h4>Key Achievements</h4>
+                <ul>
+                  {experience.achievements.map(
+                    (achievement, achievementIndex) => (
+                      <li key={achievementIndex}>{achievement}</li>
+                    ),
+                  )}
+                </ul>
+              </div>
+
+              <div className={styles.skillTags}>
+                {experience.technologies.map((tech, techIndex) => (
+                  <span key={techIndex} className={styles.skillTag}>
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
+
+            <div className={styles.timelineDot}></div>
           </div>
         ))}
 
@@ -59,32 +70,35 @@ export default function ExperiencePage() {
           </div>
         </div>
 
-        {/* Certifications Section */}
-        <div className={styles.certificationsSection}>
-          <h2 className={styles.skillsTitle}>{certifications.title}</h2>
-          <div className={styles.certificationsList}>
-            {certifications.items.map((cert, index) => (
-              <div key={index} className={styles.certificationItem}>
-                <h3>{cert.name}</h3>
-                <p>
-                  {cert.issuer} • {cert.year}
-                </p>
-              </div>
-            ))}
+        {/* Secondary Sections Container */}
+        <div className={styles.sectionsContainer}>
+          {/* Certifications Section */}
+          <div className={styles.certificationsSection}>
+            <h2 className={styles.skillsTitle}>{certifications.title}</h2>
+            <div className={styles.certificationsList}>
+              {certifications.items.map((cert, index) => (
+                <div key={index} className={styles.certificationItem}>
+                  <h3>{cert.name}</h3>
+                  <p>
+                    {cert.issuer} • {cert.year}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Education Section */}
-        <div className={styles.educationSection}>
-          <h2 className={styles.skillsTitle}>{education.title}</h2>
-          <div className={styles.educationItem}>
-            <h3>{education.degree}</h3>
-            <p>
-              {education.school} • {education.period}
-            </p>
-            {education.details.map((detail, index) => (
-              <p key={index}>{detail}</p>
-            ))}
+          {/* Education Section */}
+          <div className={styles.educationSection}>
+            <h2 className={styles.skillsTitle}>{education.title}</h2>
+            <div className={styles.educationItem}>
+              <h3>{education.degree}</h3>
+              <p>
+                {education.school} • {education.period}
+              </p>
+              {education.details.map((detail, index) => (
+                <p key={index}>{detail}</p>
+              ))}
+            </div>
           </div>
         </div>
       </div>
